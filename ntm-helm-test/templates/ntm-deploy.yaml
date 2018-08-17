@@ -1,0 +1,125 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: ntmdb
+  labels:
+    app: {{ template "ntm-helm.name" . }}
+    chart: {{ template "ntm-helm.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ template "ntm-helm.name" . }}
+      release: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ template "ntm-helm.name" . }}
+        release: {{ .Release.Name }}
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: postgres:9.6.9
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          volumes:
+            - /app/db/postgresql/data:/var/lib/postgresql/data
+          environment:
+            - POSTGRES_DB=ncp_core_db
+            - POSTGRES_USER=itm_core
+            - POSTGRES_PASSWORD=~@WSX3edc
+            - POSTGRES_INITDB_ARGS=--encoding=UTF-8
+            - TZ=Asia/Seoul
+          ports:
+            - name: http
+              containerPort: 5432
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
+          resources:
+          healthcheck:
+            test: "pg_isready -h localhost -p 5432 -q -U itm_core"
+            interval: 3s
+            timeout: 1s
+            retries: 10
+{{ toYaml .Values.resources | indent 12 }}
+    {{- with .Values.nodeSelector }}
+      nodeSelector:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+---
+kind: Deployment
+metadata:
+  name: ntm
+  labels:
+    app: {{ template "ntm-helm.name" . }}
+    chart: {{ template "ntm-helm.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ template "ntm-helm.name" . }}
+      release: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ template "ntm-helm.name" . }}
+        release: {{ .Release.Name }}
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: iij57/ntm:4.1.2
+          volumes:
+            - /app/ntm/fileupload:/appdata/ntm/fileupload
+          environment:
+            - NTM_DB_URL=jdbc:postgresql://ntmdb:5432/ncp_core_db
+            - NTM_DB_USER=itm_core
+            - NTM_DB_PASSWORD=~@WSX3edc
+            - TZ=Asia/Seoul
+            - JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          depends_on:
+            - ntmdb
+          ports:
+            - name: http
+              containerPort: 17100
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
+          resources:
+{{ toYaml .Values.resources | indent 12 }}
+    {{- with .Values.nodeSelector }}
+      nodeSelector:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+{{ toYaml . | indent 8 }}
+    {{- end }}

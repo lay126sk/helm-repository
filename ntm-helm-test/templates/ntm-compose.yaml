@@ -1,0 +1,36 @@
+version: '3.7'
+
+services:
+  ntmdb:
+    image: postgres:9.6.9
+    container_name : ntmdb
+    volumes:
+      - /app/db/postgresql/data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=ncp_core_db
+      - POSTGRES_USER=itm_core
+      - POSTGRES_PASSWORD=~@WSX3edc
+      - POSTGRES_INITDB_ARGS=--encoding=UTF-8
+      - TZ=Asia/Seoul
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: "pg_isready -h localhost -p 5432 -q -U itm_core"
+      interval: 3s
+      timeout: 1s
+      retries: 10
+  ntm:
+    image: iij57/ntm:4.1.2
+    container_name : ntm
+    volumes:
+      - /app/ntm/fileupload:/appdata/ntm/fileupload
+    environment:
+      - NTM_DB_URL=jdbc:postgresql://ntmdb:5432/ncp_core_db
+      - NTM_DB_USER=itm_core
+      - NTM_DB_PASSWORD=~@WSX3edc
+      - TZ=Asia/Seoul
+      - JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8
+    ports:
+      - "17100:8080"
+    depends_on:
+      - ntmdb
