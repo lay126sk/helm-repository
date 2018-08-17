@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "ntm-helm.fullname" . }}
+  labels:
+    app: {{ template "ntm-helm.name" . }}
+    chart: {{ template "ntm-helm.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app: {{ template "ntm-helm.name" . }}
+    release: {{ .Release.Name }}
