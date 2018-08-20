@@ -41,7 +41,7 @@ spec:
         retries: 10
   volumeClaimTemplates:
   - metadata:
-      name: www
+      name: db
     spec:
       accessModes: [ "ReadWriteOnce" ]
       storageClassName: "ntm-db-storage-class"
