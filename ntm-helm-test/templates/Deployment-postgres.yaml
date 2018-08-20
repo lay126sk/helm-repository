@@ -6,6 +6,10 @@ metadata:
     app: ntm-db
 spec:
   replicas: 3
+  selector:
+    matchLabels:
+      app: ntm-db
+  serviceName: "ntmDB"
   template:
     metadata:
       labels:
