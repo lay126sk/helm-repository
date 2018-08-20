@@ -3,7 +3,7 @@ entries:
   ntm-helm:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-08-17T17:40:34.407334152+09:00
+    created: 2018-08-20T15:21:35.762223502+09:00
     description: A Helm chart for Kubernetes
     digest: a7ba74be459159511a6c160fc34205b2cbeeedce82d87a808faa78217ab5950c
     name: ntm-helm
@@ -13,11 +13,11 @@ entries:
   ntm-helm-test:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-08-17T17:40:34.407595522+09:00
+    created: 2018-08-20T15:21:35.762847167+09:00
     description: A Helm chart for Kubernetes
     digest: 38cec8c1998b76bcb52c22a03873c27bb7ec7dc71203700cddf7171b811833ef
     name: ntm-helm-test
     urls:
     - https://lay126sk.github.io/helm-repository/ntm-helm-test-0.1.0.tgz
     version: 0.1.0
-generated: 2018-08-17T17:40:34.40670592+09:00
+generated: 2018-08-20T15:21:35.761598592+09:00
