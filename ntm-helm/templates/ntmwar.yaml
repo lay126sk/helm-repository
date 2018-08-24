@@ -48,4 +48,4 @@ spec:
           ports:
             - name: http
               containerPort: 17100
-              protocol: http
+              protocol: TCP

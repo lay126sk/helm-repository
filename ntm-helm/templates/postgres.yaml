@@ -76,23 +76,3 @@ spec:
             value: --encoding=UTF-8
           - name : TZ
             value: Asia/Seoul
-#      environment:
-#        - POSTGRES_DB=ncp_core_db
-#        - POSTGRES_USER=itm_core
-#        - POSTGRES_PASSWORD=~@WSX3edc
-#        - POSTGRES_INITDB_ARGS=--encoding=UTF-8
-#        - TZ=Asia/Seoul
-#      healthcheck:
-#        test: "pg_isready -h localhost -p 5432 -q -U itm_core"
-#        interval: 3s
-#        timeout: 1s
-#        retries: 10
-#  volumeClaimTemplates:
-#  - metadata:
-#      name: postgres-storage
-#    spec:
-#      accessModes: [ "ReadWriteOnce" ]
-#      storageClassName: ntm-db-storage
-#      resources:
-#        requests:
-#          storage: 1Gi
