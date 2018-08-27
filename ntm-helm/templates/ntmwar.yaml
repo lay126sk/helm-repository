@@ -32,10 +32,14 @@ spec:
     spec:
       volumes:
         - name: ntm-war-storage
-        - /Users/ayoung/Documents/NEXCORE/NTM/fileupload: /appdata/ntm/fileupload
+          hostPath:
+            path: /Users/ayoung/Documents/NEXCORE/NTM/fileupload
       containers:
         - name: ntm-deployment
           image: solutiondevteam/ntm:4.1.2
+          volumeMounts:
+             - name: ntm-war-storage
+               mountPath: /appdata/ntm/fileupload
           env:
             - name: NTM_DB_URL
               value: jdbc:postgresql://ntm-db-service:5432/ncp_core_db
