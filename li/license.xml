@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<license version="2.0">
+	<licenseInfo>
+		<customerCorpName>SKCC</customerCorpName>
+		<projectName>NTM로컬개발-김지훈</projectName>
+		<hostName>
+			<list>SKCC17N00526</list>
+		</hostName>
+		<macAddr>
+			<list>98-83-89-3D-36-E9</list>
+		</macAddr>
+		<type>Standard</type>
+		<startDay>2018-08-15</startDay>
+		<endDay>2034-08-29</endDay>
+	</licenseInfo>
+	<productInfo>
+		<product>
+			<productCode>NTM</productCode>
+			<productVersion>4.1.3</productVersion>
+			<productName>Test Manager</productName>
+			<productEdition>Standard</productEdition>
+			<attribute>
+			</attribute>
+		</product>
+	</productInfo>
+	<sign>MCwCFHR5NpAmu+NEprtZSf8RuBySjr+cAhQSbREDMVMEQGN6GjpOlEZs4NdSMQ==</sign>
+	<key>MIIBtzCCASwGByqGSM44BAEwggEfAoGBAP1/U4EddRIpUt9KnC7s5Of2EbdSPO9EAMMeP4C2USZpRV1AIlH7WT2NWPq/xfW6MPbLm1Vs14E7gB00b/JmYLdrmVClpJ+f6AR7ECLCT7up1/63xhv4O1fnxqimFQ8E+4P208UewwI1VBNaFpEy9nXzrith1yrv8iIDGZ3RSAHHAhUAl2BQjxUjC8yykrmCouuEC/BYHPUCgYEA9+GghdabPd7LvKtcNrhXuXmUr7v6OuqC+VdMCz0HgmdRWVeOutRZT+ZxBxCBgLRJFnEj6EwoFhO3zwkyjMim4TwWeotUfI0o4KOuHiuzpnWRbqN/C/ohNWLx+2J6ASQ7zKTxvqhRkImog9/hWuWfBpKLZl6Ae1UlZAFMO/7PSSoDgYQAAoGABeuSXgjIfK9qvqEfKQSUr7kT4Z3RomIftV24vy1/DgyR3TEi3Okued41tNCNOWwWJ5l0QwCrCZSJfXc6GQwhmoIjpzqg4bI4EkKDEe27edsv9/dAkFVLhuBQSoEfh4vI9IfAy+JKz/qN/ir1TI2sdGtwEgkGHyPgLHKnX7rNf90=</key>
+</license>
