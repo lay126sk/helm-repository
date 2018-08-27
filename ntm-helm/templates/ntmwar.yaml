@@ -30,6 +30,8 @@ spec:
       labels:
         app: ntm-deployment
     spec:
+      volumes:
+        - /Users/ayoung/Documents/NEXCORE/NTM/fileupload: /appdata/ntm/fileupload
       containers:
         - name: ntm-deployment
           image: solutiondevteam/ntm:4.1.2

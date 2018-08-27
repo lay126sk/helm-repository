@@ -1,0 +1,1757 @@
+*** Running /etc/my_init.d/00_regen_ssh_host_keys.sh...
+No SSH host key available. Generating one...
+Creating SSH2 RSA key; this may take some time ...
+Creating SSH2 DSA key; this may take some time ...
+Creating SSH2 ECDSA key; this may take some time ...
+Creating SSH2 ED25519 key; this may take some time ...
+invoke-rc.d: policy-rc.d denied execution of restart.
+*** Running /etc/rc.local...
+*** Booting runit daemon...
+*** Runit started as PID 94
+=> Creating and admin user with a random password in Tomcat
+=> Done!
+========================================================================
+You can now configure to this Tomcat server using:
+
+    admin:qoj8Ai6i80pO
+
+========================================================================
+Picked up JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF8
+27-Aug-2018 11:09:17.589 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.24
+27-Aug-2018 11:09:17.592 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jul 1 2015 20:19:55 UTC
+27-Aug-2018 11:09:17.592 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.24.0
+27-Aug-2018 11:09:17.593 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+27-Aug-2018 11:09:17.593 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.15.0
+27-Aug-2018 11:09:17.593 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+27-Aug-2018 11:09:17.594 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-8-oracle/jre
+27-Aug-2018 11:09:17.594 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_25-b17
+27-Aug-2018 11:09:17.594 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+27-Aug-2018 11:09:17.595 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /opt/tomcat
+27-Aug-2018 11:09:17.595 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /opt/tomcat
+27-Aug-2018 11:09:17.595 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF8
+27-Aug-2018 11:09:17.596 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/opt/tomcat/conf/logging.properties
+27-Aug-2018 11:09:17.596 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+27-Aug-2018 11:09:17.596 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.security.egd=file:/dev/./urandom
+27-Aug-2018 11:09:17.596 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=/opt/tomcat/endorsed
+27-Aug-2018 11:09:17.597 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/opt/tomcat
+27-Aug-2018 11:09:17.597 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/opt/tomcat
+27-Aug-2018 11:09:17.597 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/opt/tomcat/temp
+27-Aug-2018 11:09:17.598 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+27-Aug-2018 11:09:17.745 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+27-Aug-2018 11:09:17.760 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+27-Aug-2018 11:09:17.763 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+27-Aug-2018 11:09:17.764 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+27-Aug-2018 11:09:17.768 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 826 ms
+27-Aug-2018 11:09:17.798 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+27-Aug-2018 11:09:17.799 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.24
+27-Aug-2018 11:09:17.840 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive /opt/tomcat/webapps/ntm.war
+27-Aug-2018 11:09:29.459 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log 2 Spring WebApplicationInitializers detected on classpath
+27-Aug-2018 11:09:30.112 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+27-Aug-2018 11:09:32.986 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'action'
+[2018.08.27 11:09:55] jdbc.audit [120] ERROR [localhost-startStop-1] [] 1. PreparedStatement.execute() SELECT * FROM itm_config
+	 WHERE  config_code = 'projects_batch_time' 
+	order by config_code
+org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2440) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2183) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:308) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:150) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:139) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172) ~[commons-dbcp-1.4.jar:1.4]
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172) ~[commons-dbcp-1.4.jar:1.4]
+	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:418) ~[log4jdbc-remix-0.2.7.jar:na]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:62) [mybatis-3.3.0.jar:3.3.0]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:78) [mybatis-3.3.0.jar:3.3.0]
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:59) [mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:303) [mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:154) [mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:134) [mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:120) [mybatis-3.3.0.jar:3.3.0]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:113) [mybatis-3.3.0.jar:3.3.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:386) [mybatis-spring-1.2.3.jar:1.2.3]
+	at com.sun.proxy.$Proxy60.selectList(Unknown Source) [na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:205) [mybatis-spring-1.2.3.jar:1.2.3]
+	at nexcore.tm.dao.AbstractDAOHelper.selectResourceList(AbstractDAOHelper.java:92) [AbstractDAOHelper.class:na]
+	at nexcore.tm.service.ConfigService.selectConfigList(ConfigService.java:255) [ConfigService.class:na]
+	at nexcore.tm.service.ScheduleManager.getProjectsBatchExpression(ScheduleManager.java:207) [ScheduleManager.class:na]
+	at nexcore.tm.service.ScheduleManager.init(ScheduleManager.java:95) [ScheduleManager.class:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1758) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1695) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867) [spring-context-4.3.14.RELEASE.jar:na]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543) [spring-context-4.3.14.RELEASE.jar:na]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:171) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158) [servlet-api.jar:3.1.FR]
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1231) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1144) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1031) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4914) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5201) [catalina.jar:8.0.24]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:725) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717) [catalina.jar:8.0.24]
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:945) [catalina.jar:8.0.24]
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1768) [catalina.jar:8.0.24]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_25]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_25]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_25]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_25]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_25]
+[2018.08.27 11:09:55] jdbc.sqlonly [129] ERROR [localhost-startStop-1] [] 1. PreparedStatement.execute() SELECT * FROM itm_config
+	 WHERE  config_code = 'projects_batch_time' 
+	order by config_code
+org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2440) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2183) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:308) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:150) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:139) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172) ~[commons-dbcp-1.4.jar:1.4]
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172) ~[commons-dbcp-1.4.jar:1.4]
+	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:418) ~[log4jdbc-remix-0.2.7.jar:na]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:62) [mybatis-3.3.0.jar:3.3.0]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:78) [mybatis-3.3.0.jar:3.3.0]
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:59) [mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:303) [mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:154) [mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:134) [mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:120) [mybatis-3.3.0.jar:3.3.0]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:113) [mybatis-3.3.0.jar:3.3.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:386) [mybatis-spring-1.2.3.jar:1.2.3]
+	at com.sun.proxy.$Proxy60.selectList(Unknown Source) [na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:205) [mybatis-spring-1.2.3.jar:1.2.3]
+	at nexcore.tm.dao.AbstractDAOHelper.selectResourceList(AbstractDAOHelper.java:92) [AbstractDAOHelper.class:na]
+	at nexcore.tm.service.ConfigService.selectConfigList(ConfigService.java:255) [ConfigService.class:na]
+	at nexcore.tm.service.ScheduleManager.getProjectsBatchExpression(ScheduleManager.java:207) [ScheduleManager.class:na]
+	at nexcore.tm.service.ScheduleManager.init(ScheduleManager.java:95) [ScheduleManager.class:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1758) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1695) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867) [spring-context-4.3.14.RELEASE.jar:na]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543) [spring-context-4.3.14.RELEASE.jar:na]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:171) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158) [servlet-api.jar:3.1.FR]
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1231) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1144) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1031) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4914) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5201) [catalina.jar:8.0.24]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:725) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717) [catalina.jar:8.0.24]
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:945) [catalina.jar:8.0.24]
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1768) [catalina.jar:8.0.24]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_25]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_25]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_25]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_25]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_25]
+[2018.08.27 11:09:55] jdbc.sqltiming [139] ERROR [localhost-startStop-1] [] 1. PreparedStatement.execute() FAILED! SELECT * FROM itm_config
+	 WHERE  config_code = 'projects_batch_time' 
+	order by config_code {FAILED after 10 msec}
+org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2440) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2183) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:308) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:150) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:139) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172) ~[commons-dbcp-1.4.jar:1.4]
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172) ~[commons-dbcp-1.4.jar:1.4]
+	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:418) ~[log4jdbc-remix-0.2.7.jar:na]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:62) [mybatis-3.3.0.jar:3.3.0]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:78) [mybatis-3.3.0.jar:3.3.0]
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:59) [mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:303) [mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:154) [mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:134) [mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:120) [mybatis-3.3.0.jar:3.3.0]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:113) [mybatis-3.3.0.jar:3.3.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:386) [mybatis-spring-1.2.3.jar:1.2.3]
+	at com.sun.proxy.$Proxy60.selectList(Unknown Source) [na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:205) [mybatis-spring-1.2.3.jar:1.2.3]
+	at nexcore.tm.dao.AbstractDAOHelper.selectResourceList(AbstractDAOHelper.java:92) [AbstractDAOHelper.class:na]
+	at nexcore.tm.service.ConfigService.selectConfigList(ConfigService.java:255) [ConfigService.class:na]
+	at nexcore.tm.service.ScheduleManager.getProjectsBatchExpression(ScheduleManager.java:207) [ScheduleManager.class:na]
+	at nexcore.tm.service.ScheduleManager.init(ScheduleManager.java:95) [ScheduleManager.class:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1758) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1695) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867) [spring-context-4.3.14.RELEASE.jar:na]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543) [spring-context-4.3.14.RELEASE.jar:na]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:171) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158) [servlet-api.jar:3.1.FR]
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1231) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1144) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1031) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4914) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5201) [catalina.jar:8.0.24]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:725) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717) [catalina.jar:8.0.24]
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:945) [catalina.jar:8.0.24]
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1768) [catalina.jar:8.0.24]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_25]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_25]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_25]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_25]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_25]
+[2018.08.27 11:09:55] org.springframework.web.servlet.DispatcherServlet [502] ERROR [localhost-startStop-1] [] Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'quartzJobService' defined in class path resource [META-INF/spring/biz-beans.xml]: Invocation of init method failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+### The error may exist in file [/opt/tomcat/webapps/ntm/WEB-INF/classes/META-INF/persistence/mybatis/postgresql/configMapper.xml]
+### The error may involve ConfigDAO.selectConfigList-Inline
+### The error occurred while setting parameters
+### SQL: SELECT * FROM itm_config   WHERE  config_code = ?   order by config_code
+### Cause: org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+; bad SQL grammar []; nested exception is org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628) ~[spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) ~[spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761) ~[spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867) ~[spring-context-4.3.14.RELEASE.jar:na]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543) ~[spring-context-4.3.14.RELEASE.jar:na]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668) ~[spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634) ~[spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682) ~[spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553) ~[spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494) ~[spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:171) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158) [servlet-api.jar:3.1.FR]
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1231) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1144) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1031) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4914) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5201) [catalina.jar:8.0.24]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:725) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717) [catalina.jar:8.0.24]
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:945) [catalina.jar:8.0.24]
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1768) [catalina.jar:8.0.24]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_25]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_25]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_25]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_25]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_25]
+Caused by: org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+### The error may exist in file [/opt/tomcat/webapps/ntm/WEB-INF/classes/META-INF/persistence/mybatis/postgresql/configMapper.xml]
+### The error may involve ConfigDAO.selectConfigList-Inline
+### The error occurred while setting parameters
+### SQL: SELECT * FROM itm_config   WHERE  config_code = ?   order by config_code
+### Cause: org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+; bad SQL grammar []; nested exception is org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:231) ~[spring-jdbc-4.3.14.RELEASE.jar:na]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73) ~[spring-jdbc-4.3.14.RELEASE.jar:na]
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:74) ~[mybatis-spring-1.2.3.jar:1.2.3]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:399) ~[mybatis-spring-1.2.3.jar:1.2.3]
+	at com.sun.proxy.$Proxy60.selectList(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:205) ~[mybatis-spring-1.2.3.jar:1.2.3]
+	at nexcore.tm.dao.AbstractDAOHelper.selectResourceList(AbstractDAOHelper.java:92) ~[AbstractDAOHelper.class:na]
+	at nexcore.tm.service.ConfigService.selectConfigList(ConfigService.java:255) ~[ConfigService.class:na]
+	at nexcore.tm.service.ScheduleManager.getProjectsBatchExpression(ScheduleManager.java:207) ~[ScheduleManager.class:na]
+	at nexcore.tm.service.ScheduleManager.init(ScheduleManager.java:95) ~[ScheduleManager.class:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1758) ~[spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1695) ~[spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624) ~[spring-beans-4.3.14.RELEASE.jar:na]
+	... 32 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2440) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2183) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:308) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:150) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:139) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172) ~[commons-dbcp-1.4.jar:1.4]
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172) ~[commons-dbcp-1.4.jar:1.4]
+	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:418) ~[log4jdbc-remix-0.2.7.jar:na]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:62) ~[mybatis-3.3.0.jar:3.3.0]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:78) ~[mybatis-3.3.0.jar:3.3.0]
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:59) ~[mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:303) ~[mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:154) ~[mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:134) ~[mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:120) ~[mybatis-3.3.0.jar:3.3.0]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:113) ~[mybatis-3.3.0.jar:3.3.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:386) ~[mybatis-spring-1.2.3.jar:1.2.3]
+	... 45 common frames omitted
+27-Aug-2018 11:09:55.786 SEVERE [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log StandardWrapper.Throwable
+ org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'quartzJobService' defined in class path resource [META-INF/spring/biz-beans.xml]: Invocation of init method failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+### The error may exist in file [/opt/tomcat/webapps/ntm/WEB-INF/classes/META-INF/persistence/mybatis/postgresql/configMapper.xml]
+### The error may involve ConfigDAO.selectConfigList-Inline
+### The error occurred while setting parameters
+### SQL: SELECT * FROM itm_config   WHERE  config_code = ?   order by config_code
+### Cause: org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+; bad SQL grammar []; nested exception is org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:171)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1231)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1144)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1031)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4914)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5201)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:725)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:945)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1768)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+### The error may exist in file [/opt/tomcat/webapps/ntm/WEB-INF/classes/META-INF/persistence/mybatis/postgresql/configMapper.xml]
+### The error may involve ConfigDAO.selectConfigList-Inline
+### The error occurred while setting parameters
+### SQL: SELECT * FROM itm_config   WHERE  config_code = ?   order by config_code
+### Cause: org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+; bad SQL grammar []; nested exception is org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:231)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:74)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:399)
+	at com.sun.proxy.$Proxy60.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:205)
+	at nexcore.tm.dao.AbstractDAOHelper.selectResourceList(AbstractDAOHelper.java:92)
+	at nexcore.tm.service.ConfigService.selectConfigList(ConfigService.java:255)
+	at nexcore.tm.service.ScheduleManager.getProjectsBatchExpression(ScheduleManager.java:207)
+	at nexcore.tm.service.ScheduleManager.init(ScheduleManager.java:95)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1758)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1695)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	... 32 more
+Caused by: org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2440)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2183)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:308)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:150)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:139)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:418)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:62)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:78)
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:59)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:303)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:154)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:134)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:120)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:113)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:386)
+	... 45 more
+
+27-Aug-2018 11:09:55.797 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.loadOnStartup Servlet [action] in web application [/ntm] threw load() exception
+ org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2440)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2183)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:308)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:150)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:139)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:418)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:62)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:78)
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:59)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:303)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:154)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:134)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:120)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:113)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:386)
+	at com.sun.proxy.$Proxy60.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:205)
+	at nexcore.tm.dao.AbstractDAOHelper.selectResourceList(AbstractDAOHelper.java:92)
+	at nexcore.tm.service.ConfigService.selectConfigList(ConfigService.java:255)
+	at nexcore.tm.service.ScheduleManager.getProjectsBatchExpression(ScheduleManager.java:207)
+	at nexcore.tm.service.ScheduleManager.init(ScheduleManager.java:95)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1758)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1695)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:171)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1231)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1144)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1031)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4914)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5201)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:725)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:945)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1768)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+27-Aug-2018 11:09:55.881 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive /opt/tomcat/webapps/ntm.war has finished in 38,041 ms
+27-Aug-2018 11:09:55.889 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /opt/tomcat/webapps/host-manager
+27-Aug-2018 11:09:55.974 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /opt/tomcat/webapps/host-manager has finished in 85 ms
+27-Aug-2018 11:09:55.975 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /opt/tomcat/webapps/manager
+27-Aug-2018 11:09:56.035 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /opt/tomcat/webapps/manager has finished in 61 ms
+27-Aug-2018 11:09:56.042 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /opt/tomcat/webapps/ROOT
+27-Aug-2018 11:09:56.077 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /opt/tomcat/webapps/ROOT has finished in 35 ms
+27-Aug-2018 11:09:56.126 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+27-Aug-2018 11:09:56.154 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+27-Aug-2018 11:09:56.155 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 38386 ms
+27-Aug-2018 11:14:24.260 INFO [Thread-8] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+27-Aug-2018 11:14:24.313 INFO [Thread-8] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+27-Aug-2018 11:14:24.314 INFO [Thread-8] org.apache.catalina.core.StandardService.stopInternal Stopping service Catalina
+27-Aug-2018 11:14:24.372 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+27-Aug-2018 11:14:24.401 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ntm] registered the JDBC driver [org.postgresql.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+27-Aug-2018 11:14:24.409 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ntm] registered the JDBC driver [net.sf.log4jdbc.DriverSpy] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+27-Aug-2018 11:14:24.409 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ntm] registered the JDBC driver [org.h2.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+27-Aug-2018 11:14:24.412 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ntm] appears to have started a thread named [Thread-5] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+ nexcore.tm.core.excel.ExcelManager$1.run(ExcelManager.java:289)
+ java.lang.Thread.run(Thread.java:745)
+27-Aug-2018 11:14:24.412 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ntm] appears to have started a thread named [DefaultQuartzScheduler_Worker-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+27-Aug-2018 11:14:24.413 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ntm] appears to have started a thread named [DefaultQuartzScheduler_Worker-2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+27-Aug-2018 11:14:24.413 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ntm] appears to have started a thread named [DefaultQuartzScheduler_QuartzSchedulerThread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:253)
+27-Aug-2018 11:14:24.428 INFO [Thread-8] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+27-Aug-2018 11:14:24.430 INFO [Thread-8] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+27-Aug-2018 11:14:24.530 INFO [Thread-8] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+27-Aug-2018 11:14:24.531 INFO [Thread-8] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+Picked up JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF8
+27-Aug-2018 11:14:25.192 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.24
+27-Aug-2018 11:14:25.194 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jul 1 2015 20:19:55 UTC
+27-Aug-2018 11:14:25.194 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.24.0
+27-Aug-2018 11:14:25.194 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+27-Aug-2018 11:14:25.194 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.15.0
+27-Aug-2018 11:14:25.195 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+27-Aug-2018 11:14:25.195 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-8-oracle/jre
+27-Aug-2018 11:14:25.195 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_25-b17
+27-Aug-2018 11:14:25.196 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+27-Aug-2018 11:14:25.196 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /opt/tomcat
+27-Aug-2018 11:14:25.196 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /opt/tomcat
+27-Aug-2018 11:14:25.197 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF8
+27-Aug-2018 11:14:25.198 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/opt/tomcat/conf/logging.properties
+27-Aug-2018 11:14:25.198 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+27-Aug-2018 11:14:25.199 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.security.egd=file:/dev/./urandom
+27-Aug-2018 11:14:25.199 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=/opt/tomcat/endorsed
+27-Aug-2018 11:14:25.199 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/opt/tomcat
+27-Aug-2018 11:14:25.200 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/opt/tomcat
+27-Aug-2018 11:14:25.200 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/opt/tomcat/temp
+27-Aug-2018 11:14:25.200 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+27-Aug-2018 11:14:25.371 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+27-Aug-2018 11:14:25.387 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+27-Aug-2018 11:14:25.389 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+27-Aug-2018 11:14:25.390 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+27-Aug-2018 11:14:25.391 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 661 ms
+27-Aug-2018 11:14:25.421 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+27-Aug-2018 11:14:25.422 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.24
+27-Aug-2018 11:14:25.452 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive /opt/tomcat/webapps/ntm.war
+27-Aug-2018 11:14:29.768 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log 2 Spring WebApplicationInitializers detected on classpath
+27-Aug-2018 11:14:29.989 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+27-Aug-2018 11:14:30.739 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'action'
+[2018.08.27 11:14:39] jdbc.audit [120] ERROR [localhost-startStop-1] [] 1. PreparedStatement.execute() SELECT * FROM itm_config
+	 WHERE  config_code = 'projects_batch_time' 
+	order by config_code
+org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2440) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2183) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:308) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:150) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:139) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172) ~[commons-dbcp-1.4.jar:1.4]
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172) ~[commons-dbcp-1.4.jar:1.4]
+	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:418) ~[log4jdbc-remix-0.2.7.jar:na]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:62) [mybatis-3.3.0.jar:3.3.0]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:78) [mybatis-3.3.0.jar:3.3.0]
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:59) [mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:303) [mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:154) [mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:134) [mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:120) [mybatis-3.3.0.jar:3.3.0]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:113) [mybatis-3.3.0.jar:3.3.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:386) [mybatis-spring-1.2.3.jar:1.2.3]
+	at com.sun.proxy.$Proxy60.selectList(Unknown Source) [na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:205) [mybatis-spring-1.2.3.jar:1.2.3]
+	at nexcore.tm.dao.AbstractDAOHelper.selectResourceList(AbstractDAOHelper.java:92) [AbstractDAOHelper.class:na]
+	at nexcore.tm.service.ConfigService.selectConfigList(ConfigService.java:255) [ConfigService.class:na]
+	at nexcore.tm.service.ScheduleManager.getProjectsBatchExpression(ScheduleManager.java:207) [ScheduleManager.class:na]
+	at nexcore.tm.service.ScheduleManager.init(ScheduleManager.java:95) [ScheduleManager.class:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1758) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1695) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867) [spring-context-4.3.14.RELEASE.jar:na]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543) [spring-context-4.3.14.RELEASE.jar:na]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:171) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158) [servlet-api.jar:3.1.FR]
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1231) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1144) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1031) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4914) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5201) [catalina.jar:8.0.24]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:725) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717) [catalina.jar:8.0.24]
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:945) [catalina.jar:8.0.24]
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1768) [catalina.jar:8.0.24]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_25]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_25]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_25]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_25]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_25]
+[2018.08.27 11:14:39] jdbc.sqlonly [129] ERROR [localhost-startStop-1] [] 1. PreparedStatement.execute() SELECT * FROM itm_config
+	 WHERE  config_code = 'projects_batch_time' 
+	order by config_code
+org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2440) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2183) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:308) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:150) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:139) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172) ~[commons-dbcp-1.4.jar:1.4]
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172) ~[commons-dbcp-1.4.jar:1.4]
+	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:418) ~[log4jdbc-remix-0.2.7.jar:na]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:62) [mybatis-3.3.0.jar:3.3.0]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:78) [mybatis-3.3.0.jar:3.3.0]
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:59) [mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:303) [mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:154) [mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:134) [mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:120) [mybatis-3.3.0.jar:3.3.0]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:113) [mybatis-3.3.0.jar:3.3.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:386) [mybatis-spring-1.2.3.jar:1.2.3]
+	at com.sun.proxy.$Proxy60.selectList(Unknown Source) [na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:205) [mybatis-spring-1.2.3.jar:1.2.3]
+	at nexcore.tm.dao.AbstractDAOHelper.selectResourceList(AbstractDAOHelper.java:92) [AbstractDAOHelper.class:na]
+	at nexcore.tm.service.ConfigService.selectConfigList(ConfigService.java:255) [ConfigService.class:na]
+	at nexcore.tm.service.ScheduleManager.getProjectsBatchExpression(ScheduleManager.java:207) [ScheduleManager.class:na]
+	at nexcore.tm.service.ScheduleManager.init(ScheduleManager.java:95) [ScheduleManager.class:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1758) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1695) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867) [spring-context-4.3.14.RELEASE.jar:na]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543) [spring-context-4.3.14.RELEASE.jar:na]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:171) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158) [servlet-api.jar:3.1.FR]
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1231) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1144) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1031) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4914) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5201) [catalina.jar:8.0.24]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:725) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717) [catalina.jar:8.0.24]
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:945) [catalina.jar:8.0.24]
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1768) [catalina.jar:8.0.24]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_25]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_25]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_25]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_25]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_25]
+[2018.08.27 11:14:39] jdbc.sqltiming [139] ERROR [localhost-startStop-1] [] 1. PreparedStatement.execute() FAILED! SELECT * FROM itm_config
+	 WHERE  config_code = 'projects_batch_time' 
+	order by config_code {FAILED after 7 msec}
+org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2440) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2183) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:308) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:150) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:139) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172) ~[commons-dbcp-1.4.jar:1.4]
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172) ~[commons-dbcp-1.4.jar:1.4]
+	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:418) ~[log4jdbc-remix-0.2.7.jar:na]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:62) [mybatis-3.3.0.jar:3.3.0]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:78) [mybatis-3.3.0.jar:3.3.0]
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:59) [mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:303) [mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:154) [mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:134) [mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:120) [mybatis-3.3.0.jar:3.3.0]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:113) [mybatis-3.3.0.jar:3.3.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:386) [mybatis-spring-1.2.3.jar:1.2.3]
+	at com.sun.proxy.$Proxy60.selectList(Unknown Source) [na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:205) [mybatis-spring-1.2.3.jar:1.2.3]
+	at nexcore.tm.dao.AbstractDAOHelper.selectResourceList(AbstractDAOHelper.java:92) [AbstractDAOHelper.class:na]
+	at nexcore.tm.service.ConfigService.selectConfigList(ConfigService.java:255) [ConfigService.class:na]
+	at nexcore.tm.service.ScheduleManager.getProjectsBatchExpression(ScheduleManager.java:207) [ScheduleManager.class:na]
+	at nexcore.tm.service.ScheduleManager.init(ScheduleManager.java:95) [ScheduleManager.class:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1758) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1695) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867) [spring-context-4.3.14.RELEASE.jar:na]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543) [spring-context-4.3.14.RELEASE.jar:na]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:171) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158) [servlet-api.jar:3.1.FR]
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1231) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1144) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1031) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4914) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5201) [catalina.jar:8.0.24]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:725) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717) [catalina.jar:8.0.24]
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:945) [catalina.jar:8.0.24]
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1768) [catalina.jar:8.0.24]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_25]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_25]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_25]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_25]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_25]
+[2018.08.27 11:14:39] org.springframework.web.servlet.DispatcherServlet [502] ERROR [localhost-startStop-1] [] Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'quartzJobService' defined in class path resource [META-INF/spring/biz-beans.xml]: Invocation of init method failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+### The error may exist in file [/opt/tomcat/webapps/ntm/WEB-INF/classes/META-INF/persistence/mybatis/postgresql/configMapper.xml]
+### The error may involve ConfigDAO.selectConfigList-Inline
+### The error occurred while setting parameters
+### SQL: SELECT * FROM itm_config   WHERE  config_code = ?   order by config_code
+### Cause: org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+; bad SQL grammar []; nested exception is org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628) ~[spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) ~[spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761) ~[spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867) ~[spring-context-4.3.14.RELEASE.jar:na]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543) ~[spring-context-4.3.14.RELEASE.jar:na]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668) ~[spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634) ~[spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682) ~[spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553) ~[spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494) ~[spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:171) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158) [servlet-api.jar:3.1.FR]
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1231) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1144) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1031) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4914) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5201) [catalina.jar:8.0.24]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:725) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717) [catalina.jar:8.0.24]
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:945) [catalina.jar:8.0.24]
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1768) [catalina.jar:8.0.24]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_25]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_25]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_25]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_25]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_25]
+Caused by: org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+### The error may exist in file [/opt/tomcat/webapps/ntm/WEB-INF/classes/META-INF/persistence/mybatis/postgresql/configMapper.xml]
+### The error may involve ConfigDAO.selectConfigList-Inline
+### The error occurred while setting parameters
+### SQL: SELECT * FROM itm_config   WHERE  config_code = ?   order by config_code
+### Cause: org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+; bad SQL grammar []; nested exception is org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:231) ~[spring-jdbc-4.3.14.RELEASE.jar:na]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73) ~[spring-jdbc-4.3.14.RELEASE.jar:na]
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:74) ~[mybatis-spring-1.2.3.jar:1.2.3]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:399) ~[mybatis-spring-1.2.3.jar:1.2.3]
+	at com.sun.proxy.$Proxy60.selectList(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:205) ~[mybatis-spring-1.2.3.jar:1.2.3]
+	at nexcore.tm.dao.AbstractDAOHelper.selectResourceList(AbstractDAOHelper.java:92) ~[AbstractDAOHelper.class:na]
+	at nexcore.tm.service.ConfigService.selectConfigList(ConfigService.java:255) ~[ConfigService.class:na]
+	at nexcore.tm.service.ScheduleManager.getProjectsBatchExpression(ScheduleManager.java:207) ~[ScheduleManager.class:na]
+	at nexcore.tm.service.ScheduleManager.init(ScheduleManager.java:95) ~[ScheduleManager.class:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1758) ~[spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1695) ~[spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624) ~[spring-beans-4.3.14.RELEASE.jar:na]
+	... 32 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2440) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2183) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:308) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:150) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:139) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172) ~[commons-dbcp-1.4.jar:1.4]
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172) ~[commons-dbcp-1.4.jar:1.4]
+	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:418) ~[log4jdbc-remix-0.2.7.jar:na]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:62) ~[mybatis-3.3.0.jar:3.3.0]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:78) ~[mybatis-3.3.0.jar:3.3.0]
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:59) ~[mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:303) ~[mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:154) ~[mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:134) ~[mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:120) ~[mybatis-3.3.0.jar:3.3.0]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:113) ~[mybatis-3.3.0.jar:3.3.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:386) ~[mybatis-spring-1.2.3.jar:1.2.3]
+	... 45 common frames omitted
+27-Aug-2018 11:14:39.408 SEVERE [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log StandardWrapper.Throwable
+ org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'quartzJobService' defined in class path resource [META-INF/spring/biz-beans.xml]: Invocation of init method failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+### The error may exist in file [/opt/tomcat/webapps/ntm/WEB-INF/classes/META-INF/persistence/mybatis/postgresql/configMapper.xml]
+### The error may involve ConfigDAO.selectConfigList-Inline
+### The error occurred while setting parameters
+### SQL: SELECT * FROM itm_config   WHERE  config_code = ?   order by config_code
+### Cause: org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+; bad SQL grammar []; nested exception is org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:171)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1231)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1144)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1031)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4914)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5201)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:725)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:945)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1768)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+### The error may exist in file [/opt/tomcat/webapps/ntm/WEB-INF/classes/META-INF/persistence/mybatis/postgresql/configMapper.xml]
+### The error may involve ConfigDAO.selectConfigList-Inline
+### The error occurred while setting parameters
+### SQL: SELECT * FROM itm_config   WHERE  config_code = ?   order by config_code
+### Cause: org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+; bad SQL grammar []; nested exception is org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:231)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:74)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:399)
+	at com.sun.proxy.$Proxy60.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:205)
+	at nexcore.tm.dao.AbstractDAOHelper.selectResourceList(AbstractDAOHelper.java:92)
+	at nexcore.tm.service.ConfigService.selectConfigList(ConfigService.java:255)
+	at nexcore.tm.service.ScheduleManager.getProjectsBatchExpression(ScheduleManager.java:207)
+	at nexcore.tm.service.ScheduleManager.init(ScheduleManager.java:95)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1758)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1695)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	... 32 more
+Caused by: org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2440)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2183)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:308)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:150)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:139)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:418)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:62)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:78)
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:59)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:303)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:154)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:134)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:120)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:113)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:386)
+	... 45 more
+
+27-Aug-2018 11:14:39.410 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.loadOnStartup Servlet [action] in web application [/ntm] threw load() exception
+ org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2440)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2183)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:308)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:150)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:139)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:418)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:62)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:78)
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:59)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:303)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:154)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:134)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:120)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:113)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:386)
+	at com.sun.proxy.$Proxy60.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:205)
+	at nexcore.tm.dao.AbstractDAOHelper.selectResourceList(AbstractDAOHelper.java:92)
+	at nexcore.tm.service.ConfigService.selectConfigList(ConfigService.java:255)
+	at nexcore.tm.service.ScheduleManager.getProjectsBatchExpression(ScheduleManager.java:207)
+	at nexcore.tm.service.ScheduleManager.init(ScheduleManager.java:95)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1758)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1695)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:171)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1231)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1144)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1031)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4914)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5201)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:725)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:945)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1768)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+27-Aug-2018 11:14:39.428 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive /opt/tomcat/webapps/ntm.war has finished in 13,976 ms
+27-Aug-2018 11:14:39.430 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /opt/tomcat/webapps/host-manager
+27-Aug-2018 11:14:39.466 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /opt/tomcat/webapps/host-manager has finished in 36 ms
+27-Aug-2018 11:14:39.467 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /opt/tomcat/webapps/manager
+27-Aug-2018 11:14:39.491 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /opt/tomcat/webapps/manager has finished in 24 ms
+27-Aug-2018 11:14:39.491 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /opt/tomcat/webapps/ROOT
+27-Aug-2018 11:14:39.528 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /opt/tomcat/webapps/ROOT has finished in 37 ms
+27-Aug-2018 11:14:39.548 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+27-Aug-2018 11:14:39.570 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+27-Aug-2018 11:14:39.583 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 14191 ms
+Picked up JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF8
+27-Aug-2018 11:14:41.300 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.24
+27-Aug-2018 11:14:41.301 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jul 1 2015 20:19:55 UTC
+27-Aug-2018 11:14:41.301 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.24.0
+27-Aug-2018 11:14:41.301 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+27-Aug-2018 11:14:41.302 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.15.0
+27-Aug-2018 11:14:41.302 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+27-Aug-2018 11:14:41.302 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-8-oracle/jre
+27-Aug-2018 11:14:41.302 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_25-b17
+27-Aug-2018 11:14:41.303 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+27-Aug-2018 11:14:41.303 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /opt/tomcat
+27-Aug-2018 11:14:41.303 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /opt/tomcat
+27-Aug-2018 11:14:41.304 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF8
+27-Aug-2018 11:14:41.304 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/opt/tomcat/conf/logging.properties
+27-Aug-2018 11:14:41.304 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+27-Aug-2018 11:14:41.304 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.security.egd=file:/dev/./urandom
+27-Aug-2018 11:14:41.304 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=/opt/tomcat/endorsed
+27-Aug-2018 11:14:41.305 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/opt/tomcat
+27-Aug-2018 11:14:41.305 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/opt/tomcat
+27-Aug-2018 11:14:41.305 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/opt/tomcat/temp
+27-Aug-2018 11:14:41.305 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+27-Aug-2018 11:14:41.595 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+27-Aug-2018 11:14:41.629 SEVERE [main] org.apache.coyote.AbstractProtocol.init Failed to initialize end point associated with ProtocolHandler ["http-nio-8080"]
+ java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:436)
+	at sun.nio.ch.Net.bind(Net.java:428)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:339)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:737)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:457)
+	at org.apache.coyote.http11.AbstractHttp11JsseProtocol.init(AbstractHttp11JsseProtocol.java:120)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:960)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:567)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:851)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:576)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:599)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:310)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:484)
+
+27-Aug-2018 11:14:41.631 SEVERE [main] org.apache.catalina.core.StandardService.initInternal Failed to initialize connector [Connector[HTTP/1.1-8080]]
+ org.apache.catalina.LifecycleException: Failed to initialize component [Connector[HTTP/1.1-8080]]
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:106)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:567)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:851)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:576)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:599)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:310)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:484)
+Caused by: org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:962)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	... 12 more
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:436)
+	at sun.nio.ch.Net.bind(Net.java:428)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:339)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:737)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:457)
+	at org.apache.coyote.http11.AbstractHttp11JsseProtocol.init(AbstractHttp11JsseProtocol.java:120)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:960)
+	... 13 more
+
+27-Aug-2018 11:14:41.633 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+27-Aug-2018 11:14:41.636 SEVERE [main] org.apache.coyote.AbstractProtocol.init Failed to initialize end point associated with ProtocolHandler ["ajp-nio-8009"]
+ java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:436)
+	at sun.nio.ch.Net.bind(Net.java:428)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:339)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:737)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:457)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:960)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:567)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:851)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:576)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:599)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:310)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:484)
+
+27-Aug-2018 11:14:41.639 SEVERE [main] org.apache.catalina.core.StandardService.initInternal Failed to initialize connector [Connector[AJP/1.3-8009]]
+ org.apache.catalina.LifecycleException: Failed to initialize component [Connector[AJP/1.3-8009]]
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:106)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:567)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:851)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:576)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:599)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:310)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:484)
+Caused by: org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:962)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	... 12 more
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:436)
+	at sun.nio.ch.Net.bind(Net.java:428)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:339)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:737)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:457)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:960)
+	... 13 more
+
+27-Aug-2018 11:14:41.640 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 872 ms
+27-Aug-2018 11:14:41.680 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+27-Aug-2018 11:14:41.681 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.24
+27-Aug-2018 11:14:41.729 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive /opt/tomcat/webapps/ntm.war
+27-Aug-2018 11:14:46.249 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log 2 Spring WebApplicationInitializers detected on classpath
+27-Aug-2018 11:14:46.454 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+27-Aug-2018 11:14:47.254 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'action'
+[2018.08.27 11:14:56] jdbc.audit [120] ERROR [localhost-startStop-1] [] 1. PreparedStatement.execute() SELECT * FROM itm_config
+	 WHERE  config_code = 'projects_batch_time' 
+	order by config_code
+org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2440) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2183) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:308) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:150) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:139) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172) ~[commons-dbcp-1.4.jar:1.4]
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172) ~[commons-dbcp-1.4.jar:1.4]
+	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:418) ~[log4jdbc-remix-0.2.7.jar:na]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:62) [mybatis-3.3.0.jar:3.3.0]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:78) [mybatis-3.3.0.jar:3.3.0]
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:59) [mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:303) [mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:154) [mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:134) [mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:120) [mybatis-3.3.0.jar:3.3.0]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:113) [mybatis-3.3.0.jar:3.3.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:386) [mybatis-spring-1.2.3.jar:1.2.3]
+	at com.sun.proxy.$Proxy60.selectList(Unknown Source) [na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:205) [mybatis-spring-1.2.3.jar:1.2.3]
+	at nexcore.tm.dao.AbstractDAOHelper.selectResourceList(AbstractDAOHelper.java:92) [AbstractDAOHelper.class:na]
+	at nexcore.tm.service.ConfigService.selectConfigList(ConfigService.java:255) [ConfigService.class:na]
+	at nexcore.tm.service.ScheduleManager.getProjectsBatchExpression(ScheduleManager.java:207) [ScheduleManager.class:na]
+	at nexcore.tm.service.ScheduleManager.init(ScheduleManager.java:95) [ScheduleManager.class:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1758) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1695) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867) [spring-context-4.3.14.RELEASE.jar:na]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543) [spring-context-4.3.14.RELEASE.jar:na]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:171) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158) [servlet-api.jar:3.1.FR]
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1231) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1144) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1031) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4914) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5201) [catalina.jar:8.0.24]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:725) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717) [catalina.jar:8.0.24]
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:945) [catalina.jar:8.0.24]
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1768) [catalina.jar:8.0.24]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_25]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_25]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_25]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_25]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_25]
+[2018.08.27 11:14:56] jdbc.sqlonly [129] ERROR [localhost-startStop-1] [] 1. PreparedStatement.execute() SELECT * FROM itm_config
+	 WHERE  config_code = 'projects_batch_time' 
+	order by config_code
+org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2440) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2183) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:308) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:150) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:139) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172) ~[commons-dbcp-1.4.jar:1.4]
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172) ~[commons-dbcp-1.4.jar:1.4]
+	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:418) ~[log4jdbc-remix-0.2.7.jar:na]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:62) [mybatis-3.3.0.jar:3.3.0]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:78) [mybatis-3.3.0.jar:3.3.0]
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:59) [mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:303) [mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:154) [mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:134) [mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:120) [mybatis-3.3.0.jar:3.3.0]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:113) [mybatis-3.3.0.jar:3.3.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:386) [mybatis-spring-1.2.3.jar:1.2.3]
+	at com.sun.proxy.$Proxy60.selectList(Unknown Source) [na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:205) [mybatis-spring-1.2.3.jar:1.2.3]
+	at nexcore.tm.dao.AbstractDAOHelper.selectResourceList(AbstractDAOHelper.java:92) [AbstractDAOHelper.class:na]
+	at nexcore.tm.service.ConfigService.selectConfigList(ConfigService.java:255) [ConfigService.class:na]
+	at nexcore.tm.service.ScheduleManager.getProjectsBatchExpression(ScheduleManager.java:207) [ScheduleManager.class:na]
+	at nexcore.tm.service.ScheduleManager.init(ScheduleManager.java:95) [ScheduleManager.class:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1758) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1695) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867) [spring-context-4.3.14.RELEASE.jar:na]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543) [spring-context-4.3.14.RELEASE.jar:na]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:171) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158) [servlet-api.jar:3.1.FR]
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1231) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1144) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1031) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4914) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5201) [catalina.jar:8.0.24]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:725) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717) [catalina.jar:8.0.24]
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:945) [catalina.jar:8.0.24]
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1768) [catalina.jar:8.0.24]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_25]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_25]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_25]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_25]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_25]
+[2018.08.27 11:14:56] jdbc.sqltiming [139] ERROR [localhost-startStop-1] [] 1. PreparedStatement.execute() FAILED! SELECT * FROM itm_config
+	 WHERE  config_code = 'projects_batch_time' 
+	order by config_code {FAILED after 16 msec}
+org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2440) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2183) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:308) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:150) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:139) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172) ~[commons-dbcp-1.4.jar:1.4]
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172) ~[commons-dbcp-1.4.jar:1.4]
+	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:418) ~[log4jdbc-remix-0.2.7.jar:na]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:62) [mybatis-3.3.0.jar:3.3.0]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:78) [mybatis-3.3.0.jar:3.3.0]
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:59) [mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:303) [mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:154) [mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:134) [mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:120) [mybatis-3.3.0.jar:3.3.0]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:113) [mybatis-3.3.0.jar:3.3.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:386) [mybatis-spring-1.2.3.jar:1.2.3]
+	at com.sun.proxy.$Proxy60.selectList(Unknown Source) [na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:205) [mybatis-spring-1.2.3.jar:1.2.3]
+	at nexcore.tm.dao.AbstractDAOHelper.selectResourceList(AbstractDAOHelper.java:92) [AbstractDAOHelper.class:na]
+	at nexcore.tm.service.ConfigService.selectConfigList(ConfigService.java:255) [ConfigService.class:na]
+	at nexcore.tm.service.ScheduleManager.getProjectsBatchExpression(ScheduleManager.java:207) [ScheduleManager.class:na]
+	at nexcore.tm.service.ScheduleManager.init(ScheduleManager.java:95) [ScheduleManager.class:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1758) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1695) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761) [spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867) [spring-context-4.3.14.RELEASE.jar:na]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543) [spring-context-4.3.14.RELEASE.jar:na]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:171) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158) [servlet-api.jar:3.1.FR]
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1231) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1144) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1031) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4914) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5201) [catalina.jar:8.0.24]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:725) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717) [catalina.jar:8.0.24]
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:945) [catalina.jar:8.0.24]
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1768) [catalina.jar:8.0.24]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_25]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_25]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_25]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_25]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_25]
+[2018.08.27 11:14:56] org.springframework.web.servlet.DispatcherServlet [502] ERROR [localhost-startStop-1] [] Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'quartzJobService' defined in class path resource [META-INF/spring/biz-beans.xml]: Invocation of init method failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+### The error may exist in file [/opt/tomcat/webapps/ntm/WEB-INF/classes/META-INF/persistence/mybatis/postgresql/configMapper.xml]
+### The error may involve ConfigDAO.selectConfigList-Inline
+### The error occurred while setting parameters
+### SQL: SELECT * FROM itm_config   WHERE  config_code = ?   order by config_code
+### Cause: org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+; bad SQL grammar []; nested exception is org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628) ~[spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) ~[spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761) ~[spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867) ~[spring-context-4.3.14.RELEASE.jar:na]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543) ~[spring-context-4.3.14.RELEASE.jar:na]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668) ~[spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634) ~[spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682) ~[spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553) ~[spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494) ~[spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:171) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158) [servlet-api.jar:3.1.FR]
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1231) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1144) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1031) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4914) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5201) [catalina.jar:8.0.24]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:725) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701) [catalina.jar:8.0.24]
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717) [catalina.jar:8.0.24]
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:945) [catalina.jar:8.0.24]
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1768) [catalina.jar:8.0.24]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_25]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_25]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_25]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_25]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_25]
+Caused by: org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+### The error may exist in file [/opt/tomcat/webapps/ntm/WEB-INF/classes/META-INF/persistence/mybatis/postgresql/configMapper.xml]
+### The error may involve ConfigDAO.selectConfigList-Inline
+### The error occurred while setting parameters
+### SQL: SELECT * FROM itm_config   WHERE  config_code = ?   order by config_code
+### Cause: org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+; bad SQL grammar []; nested exception is org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:231) ~[spring-jdbc-4.3.14.RELEASE.jar:na]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73) ~[spring-jdbc-4.3.14.RELEASE.jar:na]
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:74) ~[mybatis-spring-1.2.3.jar:1.2.3]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:399) ~[mybatis-spring-1.2.3.jar:1.2.3]
+	at com.sun.proxy.$Proxy60.selectList(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:205) ~[mybatis-spring-1.2.3.jar:1.2.3]
+	at nexcore.tm.dao.AbstractDAOHelper.selectResourceList(AbstractDAOHelper.java:92) ~[AbstractDAOHelper.class:na]
+	at nexcore.tm.service.ConfigService.selectConfigList(ConfigService.java:255) ~[ConfigService.class:na]
+	at nexcore.tm.service.ScheduleManager.getProjectsBatchExpression(ScheduleManager.java:207) ~[ScheduleManager.class:na]
+	at nexcore.tm.service.ScheduleManager.init(ScheduleManager.java:95) ~[ScheduleManager.class:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1758) ~[spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1695) ~[spring-beans-4.3.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624) ~[spring-beans-4.3.14.RELEASE.jar:na]
+	... 32 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2440) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2183) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:308) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:150) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:139) ~[postgresql-42.2.4.jar:42.2.4]
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172) ~[commons-dbcp-1.4.jar:1.4]
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172) ~[commons-dbcp-1.4.jar:1.4]
+	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:418) ~[log4jdbc-remix-0.2.7.jar:na]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:62) ~[mybatis-3.3.0.jar:3.3.0]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:78) ~[mybatis-3.3.0.jar:3.3.0]
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:59) ~[mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:303) ~[mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:154) ~[mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:134) ~[mybatis-3.3.0.jar:na]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:120) ~[mybatis-3.3.0.jar:3.3.0]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:113) ~[mybatis-3.3.0.jar:3.3.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:386) ~[mybatis-spring-1.2.3.jar:1.2.3]
+	... 45 common frames omitted
+27-Aug-2018 11:14:56.317 SEVERE [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log StandardWrapper.Throwable
+ org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'quartzJobService' defined in class path resource [META-INF/spring/biz-beans.xml]: Invocation of init method failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+### The error may exist in file [/opt/tomcat/webapps/ntm/WEB-INF/classes/META-INF/persistence/mybatis/postgresql/configMapper.xml]
+### The error may involve ConfigDAO.selectConfigList-Inline
+### The error occurred while setting parameters
+### SQL: SELECT * FROM itm_config   WHERE  config_code = ?   order by config_code
+### Cause: org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+; bad SQL grammar []; nested exception is org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:171)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1231)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1144)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1031)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4914)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5201)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:725)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:945)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1768)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+### The error may exist in file [/opt/tomcat/webapps/ntm/WEB-INF/classes/META-INF/persistence/mybatis/postgresql/configMapper.xml]
+### The error may involve ConfigDAO.selectConfigList-Inline
+### The error occurred while setting parameters
+### SQL: SELECT * FROM itm_config   WHERE  config_code = ?   order by config_code
+### Cause: org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+; bad SQL grammar []; nested exception is org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:231)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:74)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:399)
+	at com.sun.proxy.$Proxy60.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:205)
+	at nexcore.tm.dao.AbstractDAOHelper.selectResourceList(AbstractDAOHelper.java:92)
+	at nexcore.tm.service.ConfigService.selectConfigList(ConfigService.java:255)
+	at nexcore.tm.service.ScheduleManager.getProjectsBatchExpression(ScheduleManager.java:207)
+	at nexcore.tm.service.ScheduleManager.init(ScheduleManager.java:95)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1758)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1695)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	... 32 more
+Caused by: org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2440)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2183)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:308)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:150)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:139)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:418)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:62)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:78)
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:59)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:303)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:154)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:134)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:120)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:113)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:386)
+	... 45 more
+
+27-Aug-2018 11:14:56.318 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.loadOnStartup Servlet [action] in web application [/ntm] threw load() exception
+ org.postgresql.util.PSQLException: ERROR: relation "itm_config" does not exist
+  Position: 15
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2440)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2183)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:308)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:150)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:139)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:418)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:62)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:78)
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:59)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:303)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:154)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:134)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:120)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:113)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:386)
+	at com.sun.proxy.$Proxy60.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:205)
+	at nexcore.tm.dao.AbstractDAOHelper.selectResourceList(AbstractDAOHelper.java:92)
+	at nexcore.tm.service.ConfigService.selectConfigList(ConfigService.java:255)
+	at nexcore.tm.service.ScheduleManager.getProjectsBatchExpression(ScheduleManager.java:207)
+	at nexcore.tm.service.ScheduleManager.init(ScheduleManager.java:95)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1758)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1695)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:171)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1231)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1144)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1031)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4914)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5201)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:725)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:945)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1768)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+27-Aug-2018 11:14:56.338 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive /opt/tomcat/webapps/ntm.war has finished in 14,606 ms
+27-Aug-2018 11:14:56.341 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /opt/tomcat/webapps/host-manager
+27-Aug-2018 11:14:56.383 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /opt/tomcat/webapps/host-manager has finished in 42 ms
+27-Aug-2018 11:14:56.384 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /opt/tomcat/webapps/manager
+27-Aug-2018 11:14:56.408 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /opt/tomcat/webapps/manager has finished in 24 ms
+27-Aug-2018 11:14:56.410 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /opt/tomcat/webapps/ROOT
+27-Aug-2018 11:14:56.434 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /opt/tomcat/webapps/ROOT has finished in 24 ms
+27-Aug-2018 11:14:56.447 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 14806 ms
