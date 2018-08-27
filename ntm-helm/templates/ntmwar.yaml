@@ -31,6 +31,7 @@ spec:
         app: ntm-deployment
     spec:
       volumes:
+        - name: ntm-war-storage
         - /Users/ayoung/Documents/NEXCORE/NTM/fileupload: /appdata/ntm/fileupload
       containers:
         - name: ntm-deployment
