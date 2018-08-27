@@ -3,11 +3,11 @@ entries:
   ntm-helm:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-08-27T09:41:42.959105468+09:00
+    created: 2018-08-27T10:25:30.254210553+09:00
     description: A Helm chart for Kubernetes
-    digest: 9037c98079fe9f34feb1ccdf8957170bed014c04034d4360e265a679e6c64502
+    digest: 9f5255faf23d590ff16f274834723af5bb6692dab168baf320d67ca08a6b5866
     name: ntm-helm
     urls:
     - https://lay126sk.github.io/helm-repository/ntm-helm-0.1.0.tgz
     version: 0.1.0
-generated: 2018-08-27T09:41:42.958673752+09:00
+generated: 2018-08-27T10:25:30.253736818+09:00

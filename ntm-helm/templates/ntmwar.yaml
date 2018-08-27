@@ -32,7 +32,7 @@ spec:
     spec:
       containers:
         - name: ntm-deployment
-          image: iij57/ntm:4.1.2
+          image: solutiondevteam/ntm:4.1.2
           env:
             - name: NTM_DB_URL
               value: jdbc:postgresql://ntm-db-service:5432/ncp_core_db
