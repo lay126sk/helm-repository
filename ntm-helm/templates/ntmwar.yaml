@@ -33,7 +33,7 @@ spec:
       volumes:
         - name: ntmwarvolume
           hostPath:
-            path: /tmp/ntmwar
+            path: /mnt/vda1/hostpath-provisioner/ntmwar
             type: DirectoryOrCreate
       containers:
         - name: ntm-deployment
