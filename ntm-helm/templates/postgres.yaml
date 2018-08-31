@@ -10,20 +10,6 @@ spec:
   selector:
     app: ntm-db-statefulset
 ---
-kind: PersistentVolume
-apiVersion: v1
-metadata:
-  name: ntm-pv-volume
-  labels:
-    type: local
-spec:
-  capacity:
-    storage: 10Gi
-  accessModes:
-    - ReadWriteOnce
-  hostPath:
-    path: "/mnt/vda1/hostpath-provisioner/ntmdata"
----
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
