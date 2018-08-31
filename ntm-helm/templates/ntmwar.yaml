@@ -4,10 +4,44 @@ metadata:
   name: ntm-service
 spec:
   ports:
-    - port: 17001
+    - port: 8080
+  type: NodePort
   selector:
     app: ntm-deployment
+---
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: ntm-pv-volume
+  labels:
+    type: local
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/tmp/"
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: ntm-pv-claim
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 3GiapiVersion: v1
+kind: Service
+metadata:
+  name: ntm-service
+spec:
+  ports:
+    - port: 8080
   type: NodePort
+  selector:
+    app: ntm-deployment
 ---
 apiVersion: apps/v1beta2
 kind: Deployment
@@ -31,15 +65,13 @@ spec:
         app: ntm-deployment
     spec:
       volumes:
-        - name: ntm-war-storage
+        - name: ntmwarvolume
           hostPath:
-            path: /Users/ayoung/Documents/NEXCORE/NTM/fileupload
+            path: /tmp/ntmwar
+            type: DirectoryOrCreate
       containers:
         - name: ntm-deployment
-          image: solutiondevteam/ntm:4.1.2
-          volumeMounts:
-             - name: ntm-war-storage
-               mountPath: /appdata/ntm/fileupload
+          image: solutiondevteam/ntm:4.1.2.4
           env:
             - name: NTM_DB_URL
               value: jdbc:postgresql://ntm-db-service:5432/ncp_core_db
@@ -50,9 +82,62 @@ spec:
             - name: TZ
               value: Asia/Seoul
             - name: JAVA_TOOL_OPTIONS
-              value: -Dfile.encoding=UTF8 
+              value: -Dfile.encoding=UTF8
           imagePullPolicy: Always
+          volumeMounts:
+          - name: ntmwarvolume
+            mountPath: /appdata/ntm/fileupload
           ports:
             - name: http
-              containerPort: 17100
+              containerPort: 8080
+              protocol: TCP
+
+---
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: ntm-deployment
+  labels:
+    app: ntm-deployment
+spec:
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  selector:
+    matchLabels:
+      app: ntm-deployment
+  template:
+    metadata:
+      labels:
+        app: ntm-deployment
+    spec:
+      volumes:
+        - name: ntmwarvolume
+          hostPath:
+            path: /tmp/ntmwar
+            type: DirectoryOrCreate
+      containers:
+        - name: ntm-deployment
+          image: solutiondevteam/ntm:4.1.2.4
+          env:
+            - name: NTM_DB_URL
+              value: jdbc:postgresql://ntm-db-service:5432/ncp_core_db
+            - name: NTM_DB_USER
+              value: itm_core
+            - name: NTM_DB_PASSWORD
+              value: ~@WSX3edc
+            - name: TZ
+              value: Asia/Seoul
+            - name: JAVA_TOOL_OPTIONS
+              value: -Dfile.encoding=UTF8
+          imagePullPolicy: Always
+          volumeMounts:
+          - name: ntmwarvolume
+            mountPath: /appdata/ntm/fileupload
+          ports:
+            - name: http
+              containerPort: 8080
               protocol: TCP
