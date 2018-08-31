@@ -31,6 +31,8 @@ metadata:
 spec:
   accessModes:
     - ReadWriteOnce
+  hostPath:
+    path: "/mnt/vda1/hostpath-provisioner/ntmdata"
   resources:
     requests:
       storage: 3Gi
