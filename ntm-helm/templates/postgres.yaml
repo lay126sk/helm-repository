@@ -5,36 +5,10 @@ metadata:
 spec:
   ports:
     - port: 5432
-      targetPort: 5432
+      nodePort: 31701 #랜덤으로 부여되는 포트번호보다 차라리 지정하여 사용하면 괜찮을것 같은 포트 번호
   type: NodePort
   selector:
     app: ntm-db-statefulset
----
-kind: PersistentVolume
-apiVersion: v1
-metadata:
-  name: ntm-pv-volume
-  labels:
-    type: local
-spec:
-  capacity:
-    storage: 10Gi
-  accessModes:
-    - ReadWriteOnce
-  hostPath:
-    path: "/mnt/vda1/hostpath-provisioner/ntmdata"
----
-kind: PersistentVolumeClaim
-apiVersion: v1
-metadata:
-  name: ntm-pv-claim
-spec:
-  accessModes:
-    - ReadWriteOnce
-  storageClassName: ntm-pv-claim-data
-  resources:
-    requests:
-      storage: 3Gi
 ---
 kind: StatefulSet
 apiVersion: apps/v1beta2
@@ -43,7 +17,7 @@ metadata:
   labels:
     app: ntm-db-statefulset
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: ntm-db-statefulset
@@ -55,11 +29,13 @@ spec:
     spec:
       securityContext:
         runAsUser: 999
+        runAsGroup: 999
         fsGroup: 999
       volumes:
-        - name: ntm-db-storage
-          persistentVolumeClaim:
-            claimName: ntm-pv-claim
+        - name: ntmdbvolume
+          hostPath:
+            path: /tmp/ntmdata
+            type: Directory
       containers:
       - name: ntm-db
         image: postgres:9.6.9
@@ -67,7 +43,7 @@ spec:
           - containerPort: 5432
             name: postgres
         volumeMounts:
-        - name: ntm-db-storage
+        - name: ntmdbvolume
           mountPath: /var/lib/postgresql/data
         env:
           - name : POSTGRES_DB
